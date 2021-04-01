@@ -19,7 +19,7 @@ body {
 img {
   max-width: 100%;
   border-radius: 10px;
-  display: block;
+  display: flex;
   margin: auto;
 }
 
@@ -50,26 +50,24 @@ hr.solid {
   font-weight: lighter;
 }
 
-.flex{
-margin: auto;
+.flex {
+  margin: 45px auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.sec1 {
-  margin: 70px 100px 100px 100px;
+.col {
+  margin: 70px 90px;
   padding: 20px 40px 40px;
   text-align: center;
   background: #fff;
   border-top: 4px solid orange;
   border-radius: 2px;
-}
-
-.sec2 {
-  margin: 70px 100px 100px 100px;
-  padding: 20px 40px 40px;
-  text-align: center;
-  background: #fff;
-  border-top: 4px solid orange;
-  border-radius: 2px;
+  flex-grow: 1;
+  flex-basis: 200px;
 }
 
 footer {
@@ -82,6 +80,7 @@ footer .copyright {
   top: -8px;
   margin-right: 20px;
   font-size: .75em;
+  position: sticky;
 }
 
 footer ul {
@@ -94,30 +93,12 @@ footer ul li {
   display: inline-block;
 }
 
-@media screen and (min-width: 769px) {
 
-  .flex {
-      display: flex;
-  }
-
-  .col {
-    flex: 1 50%;
-
-  }
-
-
-  }
-
-  @@media screen and (max-width: 1025px) {
-
-    .sec1 {
-      flex-direction: column;
-      align-items: center;
-      flex: 1;
-    }
+@media screen and (min-width: 320px) and (max-width: 868px) {
 
     .col {
-      flex-basis: 0;
+      margin: 5px;
+      padding: 20px;
     }
 
   }
