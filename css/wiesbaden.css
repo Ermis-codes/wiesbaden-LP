@@ -63,6 +63,15 @@ margin: auto;
   border-radius: 2px;
 }
 
+.sec2 {
+  margin: 70px 100px 100px 100px;
+  padding: 20px 40px 40px;
+  text-align: center;
+  background: #fff;
+  border-top: 4px solid orange;
+  border-radius: 2px;
+}
+
 footer {
   width: 100%;
   min-height: 20px;
@@ -85,11 +94,30 @@ footer ul li {
   display: inline-block;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 769px) {
 
   .flex {
       display: flex;
-      max-width: 1200px;
-      justify-content: space-around;
-      margin: 0 auto;
+  }
+
+  .col {
+    flex: 1 50%;
+
+  }
+
+
+  }
+
+  @@media screen and (max-width: 1025px) {
+
+    .sec1 {
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    .col {
+      flex-basis: 0;
+    }
+
   }
